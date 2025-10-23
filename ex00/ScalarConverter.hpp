@@ -6,7 +6,7 @@
 /*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 07:27:12 by root              #+#    #+#             */
-/*   Updated: 2025/10/23 19:17:13 by root             ###   ########.fr       */
+/*   Updated: 2025/10/24 01:35:29 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 enum e_type
 {
 	CHAR,
-	FLOAT,
-	INT,
+	FLO,AT,
+	INT
 	DOUBLE,
 	UNKNOWN
 };
@@ -36,9 +36,9 @@ int isDouble(std::string var);
 int isChar(std::string var);
 e_type detect_type(std::string var);
 void printChar(std::string var);
-//void printInt();
-//void printFloat();
-//void printDouble();
+void printInt(std::string var);
+void printFloat(std::string var);
+void printDouble(std::string var);
 
 
 #endif
