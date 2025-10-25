@@ -6,7 +6,7 @@
 /*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 07:27:12 by root              #+#    #+#             */
-/*   Updated: 2025/10/24 01:35:29 by root             ###   ########.fr       */
+/*   Updated: 2025/10/25 13:32:47 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,19 @@
 enum e_type
 {
 	CHAR,
-	FLO,AT,
-	INT
+	FLOAT,
+	INT,
 	DOUBLE,
 	UNKNOWN
 };
 
 class ScalarConverter 
 {
+	private :
+		ScalarConverter();
+		~ScalarConverter();
+		ScalarConverter(ScalarConverter &other);
+		ScalarConverter &operator=(ScalarConverter &other);
 	public:
 		void static convert(std::string var);	
 };

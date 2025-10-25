@@ -6,11 +6,31 @@
 /*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 07:32:27 by root              #+#    #+#             */
-/*   Updated: 2025/10/24 01:31:22 by root             ###   ########.fr       */
+/*   Updated: 2025/10/25 13:33:16 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.hpp"
+
+ScalarConverter::ScalarConverter()
+{
+}
+
+ScalarConverter::~ScalarConverter()
+{
+}
+
+ScalarConverter &ScalarConverter::operator=(ScalarConverter &other)
+{
+	if (this != &other)
+		*this = other;
+	return (*this);
+}
+
+ScalarConverter::ScalarConverter(ScalarConverter &other)
+{
+	*this = other;
+}
 
 e_type detect_type(std::string var)
 {
