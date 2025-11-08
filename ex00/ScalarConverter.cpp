@@ -108,9 +108,7 @@ int isFloat(std::string var)
 		if (!std::isdigit(var[i]))
 		{
 			if (var[i] == '.')
-			{
 				has_dot = true;
-			}
 			else 
 				return (0);
 		}
@@ -133,10 +131,8 @@ int isDouble(std::string var)
 		if (!std::isdigit(var[i]))
 		{
 			if (var[i] == '.')
-			{
 				has_dot = true;
-			}
-			else 
+			else
 				return (0);
 		}
 		i++;

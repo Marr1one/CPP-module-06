@@ -10,12 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "Serializer.hpp"
 
 int main()
 {
-	Serializer s;
+	// Serializer s;
 	Data test;
 	uintptr_t container;
 	Data *dataContainer;
