@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 07:32:27 by root              #+#    #+#             */
-/*   Updated: 2025/10/25 13:33:16 by root             ###   ########.fr       */
+/*   Updated: 2025/12/09 17:52:19 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ int isInt(std::string var)
 	int len = var.length();
 	if (var[i] == '+' || var[i] == '-')
 		i++;
-	if (i >= var.length())
+	if (i >= len)
 		return (0);
 	while (i < len)
 	{
@@ -89,7 +89,7 @@ int isInt(std::string var)
 
 int isChar(std::string var)
 {
-	return (var.length() == 1);
+	return (var.length() == 1 && !std::isdigit(var[0]));
 }
 
 int isFloat(std::string var)
@@ -99,7 +99,7 @@ int isFloat(std::string var)
 	int len = var.length();
 	int i = 0;
 	bool has_dot = false;
-	if (var[var.length() - 1] != 'f')
+	if (var[len - 1] != 'f')
 		return (0);
 	if (var[i] == '+' || var[i] == '-')
 		i++;
@@ -186,6 +186,7 @@ void printFloat(std::string var)
 
 void printDouble(std::string var)
 {
+	std::cout<<"dans le cas double\n";
 	double d = std::atof(var.c_str());
 	if (d < 33 || d > 126)
 		std::cout << "char : " << "impossible" << std::endl;
@@ -195,6 +196,6 @@ void printDouble(std::string var)
 		std::cout << "int : " << "impossible" << std::endl;
 	else
 		std::cout << "int : " << static_cast<int>(d) << std::endl;
-	std::cout << "float : " << static_cast<float>(d) << ".0f"<<  std::endl;
+	std::cout << "float : " << static_cast<float>(d) << "f"<<  std::endl;
 	std::cout << "double : " << var <<  std::endl;
 }

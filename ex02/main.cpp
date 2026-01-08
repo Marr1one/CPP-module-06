@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 13:48:24 by root              #+#    #+#             */
-/*   Updated: 2025/10/25 18:13:44 by root             ###   ########.fr       */
+/*   Updated: 2025/12/09 18:40:01 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 Base * generate(void)
 {
-	std::srand(time(NULL));
+	
 	int r = std::rand()%3;
 	if (r == 0)
 		return (new A);
@@ -79,8 +79,16 @@ void identify(Base& p)
 
 int main()
 {
+	std::srand(time(NULL));
+	// Test avec adresse
+	Base *a = generate();
+	identify(a);
+
+	// Test avec reference
 	Base *b = generate();
-	identify(*b);
+	Base &ref = *b;
+	identify(ref);
+	
 	return (0);
 }
 
