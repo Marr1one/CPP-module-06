@@ -6,7 +6,7 @@
 /*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 16:09:11 by root              #+#    #+#             */
-/*   Updated: 2025/12/09 17:57:28 by marwan           ###   ########.fr       */
+/*   Updated: 2026/01/28 16:42:46 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ class Serializer
 	private :
 		Serializer();
 		~Serializer();
-		Serializer(Serializer &other);
-		Serializer &operator=(Serializer &other);
+		Serializer(const Serializer &other);
+		Serializer &operator=(const Serializer &other);
 		
 	public :
 		static uintptr_t serialize(Data *ptr);

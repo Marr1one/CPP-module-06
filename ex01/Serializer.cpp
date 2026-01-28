@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Serializer.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 10:32:14 by root              #+#    #+#             */
-/*   Updated: 2025/10/25 13:33:24 by root             ###   ########.fr       */
+/*   Updated: 2026/01/28 16:42:59 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,14 @@ Serializer::~Serializer()
 {
 }
 
-Serializer &Serializer::operator=(Serializer &other)
+Serializer &Serializer::operator=(const Serializer &other)
 {
 	if (this != &other)
 		*this = other;
 	return (*this);
 }
 
-Serializer::Serializer(Serializer &other)
+Serializer::Serializer(const Serializer &other)
 {
 	*this = other;
 }

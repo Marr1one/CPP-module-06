@@ -6,7 +6,7 @@
 /*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 07:27:12 by root              #+#    #+#             */
-/*   Updated: 2025/12/09 17:25:26 by marwan           ###   ########.fr       */
+/*   Updated: 2026/01/28 16:42:09 by marwan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ class ScalarConverter
 	private :
 		ScalarConverter();
 		~ScalarConverter();
-		ScalarConverter(ScalarConverter &other);
-		ScalarConverter &operator=(ScalarConverter &other);
+		ScalarConverter(const ScalarConverter &other);
+		ScalarConverter &operator=(const ScalarConverter &other);
 	public:
 		void static convert(std::string var);	
 };
