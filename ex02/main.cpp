@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: maissat <maissat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 13:48:24 by root              #+#    #+#             */
-/*   Updated: 2025/12/09 18:40:01 by marwan           ###   ########.fr       */
+/*   Updated: 2026/02/04 16:33:30 by maissat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ void identify(Base& p)
 	{
 		dynamic_cast<A&>(p);
 		std::cout << "Type of base class : A\n";
+		return;
 	}
 	catch(const std::exception& e)
 	{
@@ -62,6 +63,7 @@ void identify(Base& p)
 	{
 		dynamic_cast<B&>(p);
 		std::cout << "Type of base class : B\n";
+		return;
 	}
 	catch(const std::exception& e)
 	{
@@ -70,6 +72,7 @@ void identify(Base& p)
 	{
 		dynamic_cast<C&>(p);
 		std::cout << "Type of base class : C\n";
+		return;
 	}
 	catch(const std::exception& e)
 	{
@@ -83,11 +86,13 @@ int main()
 	// Test avec adresse
 	Base *a = generate();
 	identify(a);
+	delete a;
 
 	// Test avec reference
 	Base *b = generate();
 	Base &ref = *b;
 	identify(ref);
+	delete b;
 	
 	return (0);
 }
