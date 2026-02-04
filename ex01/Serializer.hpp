@@ -3,21 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   Serializer.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: maissat <maissat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 16:09:11 by root              #+#    #+#             */
-/*   Updated: 2026/01/28 16:42:46 by marwan           ###   ########.fr       */
+/*   Updated: 2026/02/04 16:25:10 by maissat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef SERIALIZE_HPP
+#define SERIALIZE_HPP
+
 #include <iostream>
 #include <cstdint>
-
-struct Data
-{
-	std::string ex_string;
-	int ex_age;
-};
+#include "data.hpp"
 
 
 class Serializer 
@@ -32,3 +30,5 @@ class Serializer
 		static uintptr_t serialize(Data *ptr);
 		static Data *deserialize(uintptr_t raw);
 };
+
+#endif

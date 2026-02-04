@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: root <root@student.42.fr>                  +#+  +:+       +#+         #
+#    By: maissat <maissat@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/22 07:37:15 by root              #+#    #+#              #
-#    Updated: 2025/10/22 07:37:32 by root             ###   ########.fr        #
+#    Updated: 2026/02/03 15:52:47 by maissat          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex00
+NAME = convert
 
 SRC = main.cpp ScalarConverter.cpp
 

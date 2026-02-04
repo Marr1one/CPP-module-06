@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marwan <marwan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: maissat <maissat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 16:07:45 by root              #+#    #+#             */
-/*   Updated: 2025/12/09 18:03:46 by marwan           ###   ########.fr       */
+/*   Updated: 2026/02/04 16:25:36 by maissat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Serializer.hpp"
+#include "data.hpp"
 
 int main()
 {
@@ -23,8 +24,10 @@ int main()
 	
 	std::cout << "test adress :" << &test << std::endl;
 	adress_container = Serializer::serialize(&test);
+	std::cout << "Number serialized = > " << adress_container << std::endl;
 	dataContainer = Serializer::deserialize(adress_container);
 	std::cout << "data container adress :" << dataContainer << std::endl;
-	std::cout << "After serialize and deserialize ===\n";
-	std::cout << dataContainer->ex_age << ", " << dataContainer->ex_string << std::endl;
+	std::cout << "After serialize and deserialize === > ";
+	std::cout  << "age = > " << dataContainer->ex_age << ", string == > " << dataContainer->ex_string << std::endl;
+	return (0);
 }

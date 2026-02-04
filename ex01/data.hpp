@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   data.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maissat <maissat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 19:19:20 by root              #+#    #+#             */
-/*   Updated: 2026/02/03 16:08:58 by maissat          ###   ########.fr       */
+/*   Created: 2026/02/04 16:19:08 by maissat           #+#    #+#             */
+/*   Updated: 2026/02/04 16:23:37 by maissat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScalarConverter.hpp"
+#ifndef DATA_HPP
+#define DATA_HPP
 
-int main(int argc, char **argv)
+#include <iostream>
+
+struct Data
 {
-	if (argc != 2)
-		return (std::cout << "Usage : ./exec param\n", 0);
-	ScalarConverter::convert(argv[1]);
-	return (0);
-}
+	std::string ex_string;
+	int ex_age;
+};
+
+#endif
